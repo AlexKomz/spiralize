@@ -41,6 +41,9 @@ const spiralize = (size) => {
             n--;
         }
         n++;
+
+        if (matrix[n][m] === 1 && subMatrixSize === 2) matrix[n][m] = 0;
+
         m++;
 
         subMatrixSize -= 4;
