@@ -10,31 +10,33 @@ const spiralize = (size) => {
     let i = 0;
 
     while (subMatrixSize > 0) {
-        let m = i * 2;
-        let n = m;
+        let step = i * 2;
 
-        while (m < subMatrixSize + (i * 2)) {
+        let m = step;
+        let n = step;
+
+        while (m < subMatrixSize + step) {
             matrix[n][m] = 1;
             m++;
         }
         m--;
         n++;
 
-        while (n < subMatrixSize + (i * 2)) {
+        while (n < subMatrixSize + step) {
             matrix[n][m] = 1;
             n++;
         }
         n--;
         m--
         
-        while (m >= 0 + (i * 2)) {
+        while (m >= 0 + step) {
             matrix[n][m] = 1;
             m--;
         }
         m++;
         n--;
 
-        while (n > 1 + (i * 2)) {
+        while (n > 1 + step) {
             matrix[n][m] = 1;
             n--;
         }
